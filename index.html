@@ -1,0 +1,36 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ajax-ex-boolflix - C. Paiano</title>
+        <link rel="stylesheet" href="style/main.css">
+    </head>
+    <body>
+         
+        <input class="search-bar" type="text">
+        <button class="search-btn">Cerca</button>
+
+        <div class="movie-list">
+            <!-- Verrà popolato con l'ausilio di -->
+        </div>
+
+        <script id="movie-template" type="text/x-handlebars-template">
+            <div class="movie">
+            <ul>
+                <li>{{title}}</li>
+                <li>{{originalTitle}}</li>
+                <li>{{language}}</li>
+                <li>{{averageVote}}</li>
+            </ul>
+        </script>
+
+       
+        <!-- JS -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js'></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
