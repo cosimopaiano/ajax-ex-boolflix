@@ -1,12 +1,109 @@
-/* GENERAL SETTINGS */
-
+  
+/* General setting */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: 18px;;
+  height: 100vh;
+  background-image: url(../img/sfondo.jpg);
+  background-size:cover;
+  background-color: #141111;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 15%;
+  background-color: black;
+}
+
+.search-logo {
+  margin-left: 40px;
+
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+}
+
+.search-bar {
+  width: 220px;
+  height: 40px;
+  padding: 7px;
+  outline: none;
+  font-size: 20px;
+}
+.search-btn {
+  width: 75px;
+  height: 40px;
+  border: none;
+  outline: none;
+  background-color: #b1a6a6;
+}
+
+/* Movie list */
+.movie-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  max-height: 80vh;
+  margin: 0 auto;
+  padding-top: 20px;
+  overflow-y: auto;
+  cursor: pointer;
+}
+
+.movie {
+  position: relative;
+  margin: 10px;
+}
+
+.movie-poster {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  transition: opacity .7s;
+}
+
+.movie-poster.active {
+  border: 3px solid black;
+  opacity: .2;
+}
+
+.movie-list-details {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 10px;
+  list-style: none;
+  line-height: 20px;;
+  color: white;
+  display: none;
+  z-index: 1;
+}
+
+.movie-liking i {
+  color: goldenrod;
+}
+.movie-plot {
+  text-align: justify;
+}
+
+/* flag icone */ 
 .flag {
-  width: 15px;
+  width: 18px;
   height: auto;
 }

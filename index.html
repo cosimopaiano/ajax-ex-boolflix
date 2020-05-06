@@ -8,27 +8,37 @@
         <title>ajax-ex-boolflix - C. Paiano</title>
         <!-- Fontawsome -->
         <script src="https://kit.fontawesome.com/afce777129.js" crossorigin="anonymous"></script>
-        <!-- My css-->
+        <!-- css -->
         <link rel="stylesheet" href="style/main.css">
     </head>
     <body>
+        <header>
+            <img src="img/logo3.png" alt="logo" class="search-logo">
+            <div class="search">
+                <input class="search-bar" type="text">
+                <button class="search-btn">Cerca</button>
+            </div>
+        </header>
          
-        <input class="search-bar" type="text">
-        <button class="search-btn">Cerca</button>
-
-        <div class="movie-list">
-            <!-- Verrà popolato con l'ausilio di -->
-        </div>
+        <main>
+            <div class="movie-list">
+                <!-- Verrà popolato con l'ausilio di handlebars -->
+            </div>
+        </main>
+        
 
         <script id="movie-template" type="text/x-handlebars-template">
             <div class="movie">
-            <ul>
-                <li>{{title}}</li>
-                <li>{{originalTitle}}</li>
-                <li>{{{language}}}</li>
-                <li>{{{averageVote}}}</li>
-                <li>{{type}}</li>
-            </ul>
+                <img class="movie-poster" src="{{poster}}" alt="Poster">
+                <ul class="movie-list-details">
+                    <li>{{title}}</li>
+                    <li>{{originalTitle}}</li>
+                    <li>{{{language}}}</li>
+                    <li class="movie-liking">{{{averageVote}}}</li>
+                    <li>{{type}}</li>
+                    <li class="movie-plot">{{overview}}</li>
+                </ul>
+            </div>  
         </script>
 
        
