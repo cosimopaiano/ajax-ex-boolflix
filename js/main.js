@@ -64,7 +64,7 @@ $(document).ready(function () {
     });
 
     // Ricerca film con tasto enter
-    inputSearch.keyup(function(e) {
+    inputSearch.keypress(function(e) {
         
         if(e.which === 13 || e.keyCode === 13) {
             var searchTitle = inputSearch.val().trim();
@@ -79,12 +79,11 @@ $(document).ready(function () {
     $('body').on('mouseenter', '.movie', function() {
         $(this).children('.movie-list-details').fadeIn();
         $(this).children('.movie-poster').addClass('active');
-    });
-
-    $('body').on('mouseleave', '.movie', function() {
+    }).on('mouseleave', '.movie', function() {
         $(this).children('.movie-list-details').fadeOut();
         $(this).children('.movie-poster').removeClass('active');
     });
+ 
 
 }); // end doc ready
 
